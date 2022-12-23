@@ -6,3 +6,5 @@ Our NLP technology includes both speech-to-text and text-to-speech capabilities,
 In addition to searching for recipes, Tummy Recipe also includes a "Last 10 Clicked" tab that allows you to easily access the recipes you've recently viewed. You can also view detailed recipe instructions and cooking times, as well as see which ingredients you'll need for each recipe.
 
 Tummy Recipe is built using the MVP (Model View Presenter) architecture, which helps to separate the presentation layer from the business logic and data models. This allows for a clean and modular design, making it easy to add new features and functionality to the app.
+
+![image](https://user-images.githubusercontent.com/82388275/209277175-49c09a85-0447-489c-a8bb-3d9ddf5fd4a5.png)
