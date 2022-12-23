@@ -18,3 +18,9 @@ Model View Presenter (High-Level View)
 
 
 ![image](https://user-images.githubusercontent.com/82388275/209277315-ede30b59-6386-4324-b929-095b8287184c.png)
+
+
+Poster
+
+
+![image](https://user-images.githubusercontent.com/82388275/209277626-0ad7434d-9a65-441e-8528-a7930f947374.png)
