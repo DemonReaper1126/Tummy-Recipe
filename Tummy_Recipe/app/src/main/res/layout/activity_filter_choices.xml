@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".filter.FilterChoices">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarLayoutTheme">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/titleFilterChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/filter_choice"
+        android:textColor="@color/orange"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleFilterChoice"
+        android:layout_marginBottom="110dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- SUBSECTIONS OF INGREDIENTS -->
+            <!-- PROTEINS -->
+            <TextView
+                android:id="@+id/titleProteinFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="16dp"
+                android:text="Proteins"
+                android:textColor="@color/orange"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- PROTEIN ICON -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/titleProteinFilter"
+                android:src="@drawable/protein"
+                android:adjustViewBounds="true"
+                android:maxHeight="35dp"
+                android:maxWidth="35dp"
+                android:scaleType="fitCenter">
+
+            </ImageView>
+
+            <CheckBox
+                android:id="@+id/chicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleProteinFilter"
+                android:layout_marginStart="15dp"
+                android:text="Chicken" />
+
+            <CheckBox
+                android:id="@+id/salmon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/chicken"
+                android:layout_below="@+id/titleProteinFilter"
+                android:layout_marginStart="10dp"
+                android:text="Salmon" />
+
+            <CheckBox
+                android:id="@+id/beef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/salmon"
+                android:layout_below="@+id/titleProteinFilter"
+                android:layout_marginStart="10dp"
+                android:text="Beef" />
+
+            <CheckBox
+                android:id="@+id/pork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/beef"
+                android:layout_below="@+id/titleProteinFilter"
+                android:layout_marginStart="10dp"
+                android:text="Pork" />
+
+            <CheckBox
+                android:id="@+id/prawns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chicken"
+                android:layout_marginStart="15dp"
+                android:text="Prawns" />
+
+            <CheckBox
+                android:id="@+id/tofu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/prawns"
+                android:layout_below="@+id/chicken"
+                android:layout_marginStart="10dp"
+                android:text="Tofu" />
+
+
+            <!-- VEGETABLES -->
+            <TextView
+                android:id="@+id/titleVegetableFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/prawns"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:text="Vegetables &amp; Greens"
+                android:textColor="@color/orange"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- VEGETABLES ICON -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/prawns"
+                android:layout_toEndOf="@+id/titleVegetableFilter"
+                android:adjustViewBounds="true"
+                android:maxWidth="35dp"
+                android:maxHeight="35dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/vegetables">
+
+            </ImageView>
+
+            <CheckBox
+                android:id="@+id/broccoli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleVegetableFilter"
+                android:layout_marginStart="15dp"
+                android:text="Broccoli" />
+
+            <CheckBox
+                android:id="@+id/celery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/broccoli"
+                android:layout_below="@+id/titleVegetableFilter"
+                android:layout_marginStart="10dp"
+                android:text="Celery" />
+
+            <CheckBox
+                android:id="@+id/shallots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/celery"
+                android:layout_below="@+id/titleVegetableFilter"
+                android:layout_marginStart="10dp"
+                android:text="Shallots" />
+
+            <CheckBox
+                android:id="@+id/mushrooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/shallots"
+                android:layout_below="@+id/titleVegetableFilter"
+                android:layout_marginStart="10dp"
+                android:text="Mushrooms" />
+
+            <CheckBox
+                android:id="@+id/onions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/broccoli"
+                android:layout_marginStart="15dp"
+                android:text="Onions" />
+
+            <CheckBox
+                android:id="@+id/garlic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/onions"
+                android:layout_below="@+id/broccoli"
+                android:layout_marginStart="10dp"
+                android:text="Garlic" />
+
+            <CheckBox
+                android:id="@+id/potatoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/garlic"
+                android:layout_below="@+id/broccoli"
+                android:layout_marginStart="10dp"
+                android:text="Potatoes" />
+
+            <CheckBox
+                android:id="@+id/spinach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/potatoes"
+                android:layout_below="@+id/broccoli"
+                android:layout_marginStart="10dp"
+                android:text="Spinach" />
+
+            <CheckBox
+                android:id="@+id/cabbage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/onions"
+                android:layout_marginStart="15dp"
+                android:text="Cabbage" />
+
+            <CheckBox
+                android:id="@+id/shiitake_mushrooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/cabbage"
+                android:layout_below="@+id/onions"
+                android:layout_marginStart="10dp"
+                android:text="Shiitake_Mushrooms" />
+
+
+
+            <!-- HERBS & SPICES -->
+            <TextView
+                android:id="@+id/titleHerbsFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cabbage"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:text="Herbs &amp; Spices"
+                android:textColor="@color/orange"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- HERBS & SPICES ICON -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/titleHerbsFilter"
+                android:layout_below="@id/cabbage"
+                android:src="@drawable/spices"
+                android:adjustViewBounds="true"
+                android:maxHeight="35dp"
+                android:maxWidth="35dp"
+                android:scaleType="fitCenter">
+
+            </ImageView>
+
+            <CheckBox
+                android:id="@+id/basil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleHerbsFilter"
+                android:layout_marginStart="15dp"
+                android:text="Basil" />
+
+            <CheckBox
+                android:id="@+id/bay_leaf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/basil"
+                android:layout_below="@+id/titleHerbsFilter"
+                android:layout_marginStart="10dp"
+                android:text="Bay_Leaf" />
+
+            <CheckBox
+                android:id="@+id/black_pepper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/bay_leaf"
+                android:layout_below="@+id/titleHerbsFilter"
+                android:layout_marginStart="10dp"
+                android:text="Black_Pepper" />
+
+            <CheckBox
+                android:id="@+id/cardamom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/basil"
+                android:layout_marginStart="15dp"
+                android:text="Cardamom" />
+
+            <CheckBox
+                android:id="@+id/cilantro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/basil"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/cardamom"
+                android:text="Cilantro" />
+
+            <CheckBox
+                android:id="@+id/cinnamon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/cilantro"
+                android:layout_below="@+id/basil"
+                android:layout_marginStart="10dp"
+                android:text="Cinnamon" />
+
+            <CheckBox
+                android:id="@+id/garam_masala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardamom"
+                android:layout_marginStart="15dp"
+                android:text="Garam_Masala" />
+
+            <CheckBox
+                android:id="@+id/ginger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/garam_masala"
+                android:layout_below="@+id/cardamom"
+                android:layout_marginStart="10dp"
+                android:text="Ginger" />
+
+            <CheckBox
+                android:id="@+id/paprika"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ginger"
+                android:layout_below="@+id/cardamom"
+                android:layout_marginStart="10dp"
+                android:text="Paprika" />
+
+            <CheckBox
+                android:id="@+id/thyme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garam_masala"
+                android:layout_marginStart="15dp"
+                android:text="Thyme" />
+
+            <CheckBox
+                android:id="@+id/cayenne_pepper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/thyme"
+                android:layout_below="@+id/garam_masala"
+                android:layout_marginStart="10dp"
+                android:text="Cayenne_Pepper" />
+
+            <CheckBox
+                android:id="@+id/salt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/cayenne_pepper"
+                android:layout_below="@+id/garam_masala"
+                android:layout_marginStart="10dp"
+                android:text="Salt" />
+
+
+            <!-- GRAINS & WHOLEGRAIN -->
+
+            <TextView
+                android:id="@+id/titleGrainsFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thyme"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:text="Grains &amp; Wholegrain"
+                android:textColor="@color/orange"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- GRAINS & WHOLEGRAIN ICON -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/titleGrainsFilter"
+                android:layout_below="@id/thyme"
+                android:src="@drawable/grains"
+                android:adjustViewBounds="true"
+                android:maxHeight="35dp"
+                android:maxWidth="35dp"
+                android:scaleType="fitCenter">
+
+            </ImageView>
+
+            <CheckBox
+                android:id="@+id/rice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleGrainsFilter"
+                android:layout_marginStart="15dp"
+                android:text="Rice" />
+
+            <CheckBox
+                android:id="@+id/basmati_rice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/rice"
+                android:layout_below="@+id/titleGrainsFilter"
+                android:layout_marginStart="10dp"
+                android:text="Basmati_Rice" />
+
+            <CheckBox
+                android:id="@+id/sushi_rice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/basmati_rice"
+                android:layout_below="@+id/titleGrainsFilter"
+                android:layout_marginStart="10dp"
+                android:text="Sushi_Rice" />
+
+            <CheckBox
+                android:id="@+id/spaghetti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rice"
+                android:layout_marginStart="15dp"
+                android:text="spaghetti" />
+
+
+            <!-- SUGARS & SWEETENERS -->
+            <TextView
+                android:id="@+id/titleSugarsFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spaghetti"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:text="Sugars &amp; Sweeteners"
+                android:textColor="@color/orange"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- SUGARS & SWEETENERS ICON -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/titleSugarsFilter"
+                android:layout_below="@id/spaghetti"
+                android:src="@drawable/sugar"
+                android:adjustViewBounds="true"
+                android:maxHeight="35dp"
+                android:maxWidth="35dp"
+                android:scaleType="fitCenter">
+
+            </ImageView>
+
+            <CheckBox
+                android:id="@+id/brown_sugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleSugarsFilter"
+                android:layout_marginStart="15dp"
+                android:text="Brown_Sugar" />
+
+            <CheckBox
+                android:id="@+id/caster_sugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/brown_sugar"
+                android:layout_below="@+id/titleSugarsFilter"
+                android:layout_marginStart="10dp"
+                android:text="Caster_Sugar" />
+
+            <CheckBox
+                android:id="@+id/sugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/brown_sugar"
+                android:layout_marginStart="15dp"
+                android:text="Sugar" />
+
+
+            <!-- DAIRY & EGGS -->
+            <TextView
+                android:id="@+id/titleDairyFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sugar"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:text="Dairy &amp; Eggs"
+                android:textColor="@color/orange"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- DAIRY & EGGS ICON -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/titleDairyFilter"
+                android:layout_below="@id/sugar"
+                android:src="@drawable/dairy_products"
+                android:adjustViewBounds="true"
+                android:maxHeight="35dp"
+                android:maxWidth="35dp"
+                android:scaleType="fitCenter">
+
+            </ImageView>
+
+            <CheckBox
+                android:id="@+id/flour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleDairyFilter"
+                android:layout_marginStart="15dp"
+                android:text="Flour" />
+
+            <CheckBox
+                android:id="@+id/eggs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/flour"
+                android:layout_below="@+id/titleDairyFilter"
+                android:layout_marginStart="10dp"
+                android:text="Eggs" />
+
+            <CheckBox
+                android:id="@+id/coconut_milk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/eggs"
+                android:layout_below="@+id/titleDairyFilter"
+                android:layout_marginStart="10dp"
+                android:text="Coconut_Milk" />
+
+            <CheckBox
+                android:id="@+id/parmesan_cheese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flour"
+                android:layout_marginStart="15dp"
+                android:text="Parmesan_Cheese" />
+
+
+            <!-- SAUCES -->
+            <TextView
+                android:id="@+id/titleSaucesFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/parmesan_cheese"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:text="Sauces"
+                android:textColor="@color/orange"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- SAUCES ICON -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/titleSaucesFilter"
+                android:layout_below="@id/parmesan_cheese"
+                android:src="@drawable/sauce"
+                android:adjustViewBounds="true"
+                android:maxHeight="35dp"
+                android:maxWidth="35dp"
+                android:scaleType="fitCenter">
+
+            </ImageView>
+
+            <CheckBox
+                android:id="@+id/fish_sauce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleSaucesFilter"
+                android:layout_marginStart="15dp"
+                android:text="Fish_Sauce" />
+
+            <CheckBox
+                android:id="@+id/mustard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/fish_sauce"
+                android:layout_below="@+id/titleSaucesFilter"
+                android:layout_marginStart="10dp"
+                android:text="Mustard" />
+
+            <CheckBox
+                android:id="@+id/oyster_sauce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/mustard"
+                android:layout_below="@+id/titleSaucesFilter"
+                android:layout_marginStart="10dp"
+                android:text="Oyster_Sauce" />
+
+            <CheckBox
+                android:id="@+id/tomato_ketchup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fish_sauce"
+                android:layout_marginStart="15dp"
+                android:text="Tomato_Ketchup" />
+
+            <CheckBox
+                android:id="@+id/worcestershire_sauce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tomato_ketchup"
+                android:layout_below="@+id/fish_sauce"
+                android:layout_marginStart="10dp"
+                android:text="Worcestershire_Sauce" />
+
+            <CheckBox
+                android:id="@+id/mirin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tomato_ketchup"
+                android:layout_marginStart="15dp"
+                android:text="Mirin" />
+
+            <CheckBox
+                android:id="@+id/mayonnaise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/mirin"
+                android:layout_below="@+id/tomato_ketchup"
+                android:layout_marginStart="10dp"
+                android:text="Mayonnaise" />
+
+
+
+            <!-- FRUITS & BERRIES -->
+            <TextView
+                android:id="@+id/titleFruitsFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mirin"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:text="Fruits &amp; Berries"
+                android:textColor="@color/orange"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- FRUITS & BERRIES ICON -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/titleFruitsFilter"
+                android:layout_below="@id/mirin"
+                android:src="@drawable/berries"
+                android:adjustViewBounds="true"
+                android:maxHeight="35dp"
+                android:maxWidth="35dp"
+                android:scaleType="fitCenter">
+
+            </ImageView>
+
+            <CheckBox
+                android:id="@+id/aubergine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleFruitsFilter"
+                android:layout_marginStart="15dp"
+                android:text="Aubergine" />
+
+
+            <CheckBox
+                android:id="@+id/carrots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/aubergine"
+                android:layout_below="@+id/titleFruitsFilter"
+                android:layout_marginStart="10dp"
+                android:text="Carrots" />
+
+            <CheckBox
+                android:id="@+id/orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/carrots"
+                android:layout_below="@+id/titleFruitsFilter"
+                android:layout_marginStart="10dp"
+                android:text="Orange" />
+
+            <CheckBox
+                android:id="@+id/tomatoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aubergine"
+                android:layout_marginStart="15dp"
+                android:text="Tomatoes" />
+
+            <CheckBox
+                android:id="@+id/banana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tomatoes"
+                android:layout_below="@+id/aubergine"
+                android:layout_marginStart="10dp"
+                android:text="Banana" />
+
+            <CheckBox
+                android:id="@+id/peaches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/banana"
+                android:layout_below="@+id/aubergine"
+                android:layout_marginStart="10dp"
+                android:text="Peaches" />
+
+            <CheckBox
+                android:id="@+id/raisins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/peaches"
+                android:layout_below="@+id/aubergine"
+                android:layout_marginStart="10dp"
+                android:text="Raisins" />
+
+            <CheckBox
+                android:id="@+id/raspberries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tomatoes"
+                android:layout_marginStart="15dp"
+                android:text="Raspberries" />
+
+            <CheckBox
+                android:id="@+id/blueberries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/raspberries"
+                android:layout_below="@+id/tomatoes"
+                android:layout_marginStart="10dp"
+                android:text="Blueberries" />
+
+            <CheckBox
+                android:id="@+id/strawberries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/blueberries"
+                android:layout_below="@+id/tomatoes"
+                android:layout_marginStart="10dp"
+                android:text="Strawberries" />
+
+
+            <!-- OILS -->
+            <TextView
+                android:id="@+id/titleOilFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/raspberries"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:text="Oils"
+                android:textColor="@color/orange"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- OILS ICON -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/titleOilFilter"
+                android:layout_below="@id/raspberries"
+                android:src="@drawable/oil"
+                android:adjustViewBounds="true"
+                android:maxHeight="35dp"
+                android:maxWidth="35dp"
+                android:scaleType="fitCenter">
+
+            </ImageView>
+
+            <CheckBox
+                android:id="@+id/olive_oil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleOilFilter"
+                android:layout_marginStart="15dp"
+                android:text="Olive_Oil" />
+
+            <CheckBox
+                android:id="@+id/sunflower_oil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/olive_oil"
+                android:layout_below="@+id/titleOilFilter"
+                android:layout_marginStart="10dp"
+                android:text="Sunflower_Oil" />
+
+            <CheckBox
+                android:id="@+id/vegetable_oil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleOilFilter"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/sunflower_oil"
+                android:text="Vegetable_Oil" />
+
+            <CheckBox
+                android:id="@+id/butter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/olive_oil"
+                android:layout_marginStart="15dp"
+                android:text="butter" />
+
+
+            <!-- BAKING -->
+            <TextView
+                android:id="@+id/titleBakingFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/butter"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:text="Baking"
+                android:textColor="@color/orange"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- BAKING ICON -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/titleBakingFilter"
+                android:layout_below="@id/butter"
+                android:src="@drawable/bake"
+                android:adjustViewBounds="true"
+                android:maxHeight="35dp"
+                android:maxWidth="35dp"
+                android:scaleType="fitCenter">
+
+            </ImageView>
+
+            <CheckBox
+                android:id="@+id/baking_powder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleBakingFilter"
+                android:layout_marginStart="15dp"
+                android:text="Baking_Powder" />
+
+            <CheckBox
+                android:id="@+id/bicarbonate_of_soda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/baking_powder"
+                android:layout_below="@+id/titleBakingFilter"
+                android:layout_marginStart="10dp"
+                android:text="Bicarbonate_of_Soda" />
+
+            <CheckBox
+                android:id="@+id/vanilla_extract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/baking_powder"
+                android:layout_marginStart="15dp"
+                android:text="Vanilla_Extract" />
+
+            <CheckBox
+                android:id="@+id/corn_flour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/vanilla_extract"
+                android:layout_below="@+id/baking_powder"
+                android:layout_marginStart="10dp"
+                android:text="Corn_Flour" />
+
+            <CheckBox
+                android:id="@+id/yeast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/corn_flour"
+                android:layout_below="@+id/baking_powder"
+                android:layout_marginStart="10dp"
+                android:text="Yeast" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="#1EFF9800" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="2dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/filterBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="@string/play_desc"
+            android:onClick="onFilteredClick"
+            android:src="@drawable/ic_filter"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <TextView
+            android:id="@+id/tts_play_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/filter"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/filterBtn"
+            app:layout_constraintEnd_toStartOf="@+id/filterBtn"
+            app:layout_constraintTop_toTopOf="@+id/filterBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
